@@ -56,7 +56,7 @@ pc-eshop-prj/
 4. **Access the application**
     - Frontend: `http://localhost:3000`
     - Backend API: `http://localhost:8000`
-    - Admin: `http://localhost:8000/admin`
+    - Admin: `http://localhost:8000/admin/`
 
 ## Features
 - Product browsing and filtering
