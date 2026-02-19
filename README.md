@@ -39,13 +39,14 @@ pc-eshop-prj/
 
 1. **Clone the repository**
     ```bash
-    cd pc-eshop-prj
+    cd Small-PCEshopProject
     ```
 
 2. **Build and start containers**
     ```bash
     docker-compose up --build
     ```
+    - Don't forget to change .env.example to .env with filled out passwords
 
 3. **Load the database**
     ```bash
