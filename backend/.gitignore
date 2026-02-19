@@ -1,0 +1,26 @@
+# --- Python & Django ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# --- Virtuální prostředí (Tohle je obří složka, tu nechceme) ---
+venv/
+env/
+.venv/
+
+# --- Tajné údaje a nastavení (TOHLE JE NEJDŮLEŽITĚJŠÍ) ---
+.env
+.DS_Store
+
+# --- Databáze (Lokální data nechceme na gitu) ---
+db.sqlite3
+
+# --- Statické soubory a média ---
+# (Pokud používáš Cloudinary, media složku nepotřebuješ verzovat)
+media/
+staticfiles/
+
+# --- IDE nastavení (Tvoje osobní nastavení editoru) ---
+.vscode/
+.idea/

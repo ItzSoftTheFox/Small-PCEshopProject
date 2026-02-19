@@ -1,0 +1,467 @@
+[
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$gWpUnihoQxPnBdaMkySOQa$6OIMCzrbC1gOvQiON2FvMo34mQ6EQZr462M2OcZAS1w=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "bob",
+    "first_name": "",
+    "last_name": "",
+    "email": "bob@email.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-02-19T01:35:18.765Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "fields": {
+    "password": "pbkdf2_sha256$1200000$HfY01PuCYxGIcIKnh93gWO$kGTa0HtiMS/OptNP0QTri3PMau1mHrQbRxZt9B5MEk8=",
+    "last_login": "2026-02-18T23:55:54.107Z",
+    "is_superuser": true,
+    "username": "admin_safe",
+    "first_name": "",
+    "last_name": "",
+    "email": "admin@example.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-02-18T18:00:49.713Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "store.category",
+  "pk": 1,
+  "fields": {
+    "name": "PC Builds",
+    "slug": "pc-builds",
+    "parent": null
+  }
+},
+{
+  "model": "store.category",
+  "pk": 2,
+  "fields": {
+    "name": "Laptops",
+    "slug": "laptops",
+    "parent": null
+  }
+},
+{
+  "model": "store.category",
+  "pk": 4,
+  "fields": {
+    "name": "PC Components",
+    "slug": "pc-components",
+    "parent": null
+  }
+},
+{
+  "model": "store.category",
+  "pk": 5,
+  "fields": {
+    "name": "Accessory",
+    "slug": "accessory",
+    "parent": null
+  }
+},
+{
+  "model": "store.category",
+  "pk": 6,
+  "fields": {
+    "name": "Gaming",
+    "slug": "gaming-pc",
+    "parent": 1
+  }
+},
+{
+  "model": "store.category",
+  "pk": 7,
+  "fields": {
+    "name": "Office",
+    "slug": "office-pc",
+    "parent": 1
+  }
+},
+{
+  "model": "store.category",
+  "pk": 8,
+  "fields": {
+    "name": "Gaming",
+    "slug": "gaming-laptops",
+    "parent": 2
+  }
+},
+{
+  "model": "store.category",
+  "pk": 9,
+  "fields": {
+    "name": "Office",
+    "slug": "office-laptops",
+    "parent": 2
+  }
+},
+{
+  "model": "store.category",
+  "pk": 10,
+  "fields": {
+    "name": "CPU",
+    "slug": "cpu",
+    "parent": 4
+  }
+},
+{
+  "model": "store.category",
+  "pk": 11,
+  "fields": {
+    "name": "Mother-Board",
+    "slug": "mother-board",
+    "parent": 4
+  }
+},
+{
+  "model": "store.category",
+  "pk": 12,
+  "fields": {
+    "name": "RAM",
+    "slug": "ram",
+    "parent": 4
+  }
+},
+{
+  "model": "store.category",
+  "pk": 13,
+  "fields": {
+    "name": "Graphic Cards",
+    "slug": "graphic-cards",
+    "parent": 4
+  }
+},
+{
+  "model": "store.category",
+  "pk": 14,
+  "fields": {
+    "name": "Storage",
+    "slug": "storage",
+    "parent": 4
+  }
+},
+{
+  "model": "store.category",
+  "pk": 15,
+  "fields": {
+    "name": "PSU",
+    "slug": "psu",
+    "parent": 4
+  }
+},
+{
+  "model": "store.category",
+  "pk": 16,
+  "fields": {
+    "name": "Case",
+    "slug": "case",
+    "parent": 4
+  }
+},
+{
+  "model": "store.product",
+  "pk": 1,
+  "fields": {
+    "category": 6,
+    "name": "ULTIMATE Gaming Beast RTX 4090",
+    "slug": "ultimate-gaming-beast",
+    "description": "Nekompromisní herní stroj pro 4K hraní. Vodní chlazení, tichý chod a brutální výkon.",
+    "price": "115990",
+    "image": "products/image-removebg-preview8_b6rc7l",
+    "stock": 2,
+    "is_available": true,
+    "created_at": "2026-02-18T19:00:57.902Z",
+    "specification": {
+      "ram_size": "64GB",
+      "gpu_model": "RTX 4070",
+      "cpu_family": "Intel Core i9",
+      "resolution": "1440p Gaming"
+    },
+    "brand": "Gaming Beast"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 2,
+  "fields": {
+    "category": 7,
+    "name": "Office Pro Silent",
+    "slug": "office-pro-silent",
+    "description": "Tichý a spolehlivý počítač pro účetnictví a kancelářskou práci. Rychlý start systému.",
+    "price": "12990",
+    "image": "products/image-removebg-preview9_zzeocn",
+    "stock": 10,
+    "is_available": true,
+    "created_at": "2026-02-19T00:05:57.151Z",
+    "specification": {
+      "ram_size": "16GB",
+      "gpu_model": "Integrated",
+      "cpu_family": "Intel Core i3",
+      "resolution": "Full HD"
+    },
+    "brand": "Lenovo"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 3,
+  "fields": {
+    "category": 8,
+    "name": "Lenovo Legion Pro 7",
+    "slug": "lenovo-legion-pro-7",
+    "description": "Jeden z nejlepších herních notebooků na trhu. Skvělé chlazení a 240Hz displej.",
+    "price": "74990",
+    "image": "products/image-removebg-preview10_gvke35",
+    "stock": 4,
+    "is_available": true,
+    "created_at": "2026-02-19T00:11:31.296Z",
+    "specification": {
+      "cpu": "Core i7",
+      "gpu": "RTX 4060",
+      "ram": "32GB",
+      "display": "16\"240Hz",
+      "storage": "1TB SSD"
+    },
+    "brand": "Lenovo"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 4,
+  "fields": {
+    "category": 9,
+    "name": "MacBook Air M3",
+    "slug": "macbook-air-m3",
+    "description": "Tenký, lehký a neuvěřitelně výkonný. Ideální na cesty a kancelářskou práci. Výdrž až 18 hodin.",
+    "price": "37990",
+    "image": "products/image-removebg-preview11_hcvpma",
+    "stock": 8,
+    "is_available": true,
+    "created_at": "2026-02-19T00:56:24.828Z",
+    "specification": {
+      "cpu": "Apple M3",
+      "gpu": "Integrated",
+      "ram": "16GB",
+      "display": "15.3\" Liquid Retina",
+      "storage": "512GB SSD"
+    },
+    "brand": "Apple"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 5,
+  "fields": {
+    "category": 10,
+    "name": "AMD Ryzen 7 7800X3D",
+    "slug": "amd-ryzen-7-7800x3d",
+    "description": "Král herních procesorů. Díky 3D V-Cache technologii drtí konkurenci ve hrách při nízké spotřebě.",
+    "price": "9990",
+    "image": "products/image-removebg-preview12_xppqqg",
+    "stock": 20,
+    "is_available": true,
+    "created_at": "2026-02-19T01:00:39.267Z",
+    "specification": {
+      "cores": 8,
+      "series": "Ryzen 7",
+      "socket": "AM5"
+    },
+    "brand": "AMD"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 6,
+  "fields": {
+    "category": null,
+    "name": "ASUS ROG STRIX B650E-F GAMING WIFI",
+    "slug": "asus-rog-strix-b650e-f-gaming-wifi",
+    "description": "Základní deska pro náročné hráče. Podpora PCIe 5.0 pro grafiku i SSD. Masivní chladiče VRM.",
+    "price": "6490",
+    "image": "products/image-removebg-preview13_dbtl4m",
+    "stock": 10,
+    "is_available": true,
+    "created_at": "2026-02-19T01:04:57.281Z",
+    "specification": {
+      "format": "ATX",
+      "socket": "AM5",
+      "chipset": "B650",
+      "ram_type": "DDR5"
+    },
+    "brand": "ASUS"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 7,
+  "fields": {
+    "category": 13,
+    "name": "MSI GeForce RTX 4070 Ti SUPER 16G",
+    "slug": "msi-geforce-rtx-4070-ti-super-16g",
+    "description": "Ideální volba pro hraní v 1440p na ultra detaily. Tichý chladič Gaming X Slim.",
+    "price": "23490",
+    "image": "products/image-removebg-preview14_hynmxd",
+    "stock": 6,
+    "is_available": true,
+    "created_at": "2026-02-19T01:06:27.364Z",
+    "specification": {
+      "chip": "RTX 4070",
+      "vram": "16GB"
+    },
+    "brand": "NVIDIA"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 8,
+  "fields": {
+    "category": 12,
+    "name": "Kingston FURY 32GB KIT DDR5 6000MHz",
+    "slug": "kingston-fury-ddr5-32gb",
+    "description": "Rychlé paměti s nízkou latencí CL30. Podpora AMD EXPO i Intel XMP.",
+    "price": "3190",
+    "image": "products/image-removebg-preview15_laqnkd",
+    "stock": 26,
+    "is_available": true,
+    "created_at": "2026-02-19T01:15:43.655Z",
+    "specification": {
+      "type": "DDR5",
+      "capacity": "32GB",
+      "frequency": "6000 MHz"
+    },
+    "brand": "Kingston"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 9,
+  "fields": {
+    "category": 14,
+    "name": "Samsung 990 PRO 2TB",
+    "slug": "samsung-990-pro-2tb",
+    "description": "Jeden z nejrychlejších SSD disků na trhu. Rychlost čtení až 7450 MB/s.",
+    "price": "4290",
+    "image": "products/image-removebg-preview16_ffucbx",
+    "stock": 25,
+    "is_available": true,
+    "created_at": "2026-02-19T01:17:35.078Z",
+    "specification": {
+      "type": "SSD NVMe",
+      "capacity": "1TB",
+      "interface": "PCIe 4.0"
+    },
+    "brand": "Samsung"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 10,
+  "fields": {
+    "category": 15,
+    "name": "Corsair RM1000x Shift",
+    "slug": "corsair-rm1000x-shift",
+    "description": "Revoluční zdroj s konektory na boku pro lepší cable management. Certifikace 80 PLUS Gold.",
+    "price": "4590",
+    "image": "products/image-removebg-preview6_og522v",
+    "stock": 8,
+    "is_available": true,
+    "created_at": "2026-02-19T01:18:16.761Z",
+    "specification": {
+      "power": "750W",
+      "modular": "Plně modulární",
+      "certification": "Gold"
+    },
+    "brand": "Corsair"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 11,
+  "fields": {
+    "category": 16,
+    "name": "NZXT H9 Flow White",
+    "slug": "nzxt-h9-flow-white",
+    "description": "Prémiová dvoukomorová skříň s panoramatickým sklem. Vynikající airflow.",
+    "price": "4990",
+    "image": "products/image-removebg-preview17_y3sr9t",
+    "stock": 4,
+    "is_available": true,
+    "created_at": "2026-02-19T01:19:39.332Z",
+    "specification": {
+      "Type": "Midi Tower",
+      "Color": "White",
+      "Fans Included": "4x 120mm"
+    },
+    "brand": "NZXT"
+  }
+},
+{
+  "model": "store.product",
+  "pk": 12,
+  "fields": {
+    "category": 5,
+    "name": "Logitech G Pro X Superlight 2",
+    "slug": "logitech-g-pro-x-superlight-2",
+    "description": "Profesionální herní myš. Extrémně lehká (60g), bezdrátová s výdrží až 95 hodin.",
+    "price": "3990",
+    "image": "products/image-removebg-preview18_pnxrp3",
+    "stock": 15,
+    "is_available": true,
+    "created_at": "2026-02-19T01:20:45.850Z",
+    "specification": {
+      "DPI": "32000",
+      "Sensor": "HERO 2",
+      "Weight": "60g",
+      "Connection": "LIGHTSPEED Wireless"
+    },
+    "brand": "Logitech"
+  }
+},
+{
+  "model": "store.order",
+  "pk": 1,
+  "fields": {
+    "user": null,
+    "full_name": "bob",
+    "email": "bob@email.com",
+    "address": "awdadawda54",
+    "city": "awd",
+    "zip_code": "97989",
+    "created_at": "2026-02-19T00:52:07.466Z",
+    "paid": false,
+    "total_amount": "75109",
+    "shipping_method": "Kurýr PPL",
+    "payment_method": "Card"
+  }
+},
+{
+  "model": "store.orderitem",
+  "pk": 1,
+  "fields": {
+    "order": 1,
+    "product": 3,
+    "price": "74990",
+    "quantity": 1
+  }
+},
+{
+  "model": "store.cart",
+  "pk": 1,
+  "fields": {
+    "user": [
+      "bob"
+    ],
+    "created_at": "2026-02-19T01:35:29.597Z"
+  }
+}
+]

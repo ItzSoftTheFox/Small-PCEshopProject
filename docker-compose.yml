@@ -1,0 +1,46 @@
+
+
+services:
+  # 1. DATABÁZE
+  db:
+    image: postgres:15-alpine
+    container_name: pceshop_db
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    # Tady stačí env_file, načte si POSTGRES_USER/PASSWORD z .env
+    env_file:
+      - .env
+    ports:
+      - "5432:5432"
+
+  # 2. BACKEND
+  backend:
+    build: ./backend
+    container_name: pceshop_backend
+    volumes:
+      - ./backend:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    # Tady je to kouzlo: Načte SECRET_KEY, DB_HOST atd.
+    env_file:
+      - .env
+
+  # 3. FRONTEND
+  frontend:
+    build: ./frontend
+    container_name: pceshop_frontend
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    ports:
+      - "3000:3000"
+    # Frontend taky potřebuje vědět URL backendu
+    env_file:
+      - .env
+    depends_on:
+      - backend
+
+volumes:
+  postgres_data:
