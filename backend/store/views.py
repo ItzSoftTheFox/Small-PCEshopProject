@@ -1,7 +1,7 @@
 from rest_framework import generics, permissions, status, filters
 from rest_framework.response import Response
 from rest_framework.views import APIView
-from .permissions import IsEmployee
+from .permissions import IsStaffMember, IsManager
 from .models import Product, Order, OrderItem, SavedCard, Category, CartItem, Cart, UserProfile
 from .serializers import OrderSerializer, SavedCardSerializer, ProductSerializer, UserSerializer, CategorySerializer, CartSerializer, CartItemSerializer, UserProfileSerializer
 from django.contrib.auth.models import User
@@ -120,13 +120,13 @@ class RegisterView(generics.CreateAPIView):
     # --- SEKCE PRO ZAMĚSTNANCE ---
 
 class ManagerAllOrdersView(generics.ListAPIView):
-    # Vrátí VŠECHNY objednávky seřazené od nejnovějších
+    # Returns ALL orders sorted by newest
     queryset = Order.objects.all().order_by('-created_at')
     serializer_class = OrderSerializer
     
-    # Tady nasadíme našeho "vyhazovače"
-    permission_classes = [IsEmployee]
-
+    # We use the updated IsStaffMember class here to allow all 4 internal roles
+    permission_classes = [IsStaffMember]
+    
 # 1. API pro uložení karty (POST)
 class SaveCardView(APIView):
     permission_classes = [permissions.IsAuthenticated]
